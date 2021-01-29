@@ -1,11 +1,13 @@
 import Image from "next/image";
 
+const nav = ["FOOD DELIVERY", "HOW IT WORKS", "OUR LOCATIONS", "SIGN UP"];
+
 export default function Header() {
   return (
     <header className="h-screen bg-hero-bg bg-clip-border bg-cover bg-fixed  ">
       <div className="grid grid-cols-10 h-full bg-black bg-opacity-70">
         <nav className="flex justify-between items-center h-36 col-start-2  col-end-10 py-4 ">
-          <div>
+          <div className="w-100px">
             <Image
               src={"/images/logo-white.png"}
               width="100px"
@@ -13,29 +15,19 @@ export default function Header() {
             />
           </div>
           <ul className="flex justify-center gap-8 ">
-            <li className="text-white text-lg py-1 border-yellow-600 border-b-2 ">
-              <a className="font-thin tracking-wide font-sans" href="#features">
-                FOOD DELIVERY
-              </a>
-            </li>
-            <li className="text-white text-lg py-1 border-yellow-600 border-b-2">
-              <a className="font-thin tracking-wide font-sans" href="#works">
-                HOW IT WORKS
-              </a>
-            </li>
-            <li className="text-white text-lg py-1 border-yellow-600 border-b-2">
-              <a className="font-thin tracking-wide font-sans" href="#cities">
-                OUR LOCATIONS
-              </a>
-            </li>
-            <li className="text-white text-lg py-1 border-yellow-600 border-b-2">
-              <a className="font-thin tracking-wide font-sans" href="#plans">
-                SIGN UP
-              </a>
-            </li>
+            {nav.map((navigationName) => (
+              <li className="text-white text-lg ">
+                <a
+                  className="font-thin tracking-wide py-1  border-b-2 border-transparent  hover:border-yellow-600"
+                  href="#features"
+                >
+                  {navigationName}
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
-        <div className="col-start-2 con col-end-8  place-content-center">
+        <div className="col-start-2 con col-end-10  place-content-center">
           <h1 className="text-6xl text-white font-extralight mb-8 leading-leading-10">
             GOODBYE JUNK FOOD.
             <br />
@@ -48,7 +40,7 @@ export default function Header() {
             I'm Hungry
           </a>
           <a
-            className="font-ligth text-yellow-600 text-xl rounded-full border-yellow-600 border py-3 px-8 mr-5"
+            className="font-ligth text-yellow-600 text-xl rounded-full border-yellow-600 border py-3 px-8 mr-5 hover:bg-yellow-600 hover:text-white"
             href="#"
           >
             Show me more
