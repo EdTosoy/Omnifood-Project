@@ -19,7 +19,7 @@ const features = [
       " cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style. ",
   },
   {
-    icon: "/images/cart.svg ",
+    icon: "/images/cart.svg",
     name: "Order anything",
     text:
       "We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you! ",
