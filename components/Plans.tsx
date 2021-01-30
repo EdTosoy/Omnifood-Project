@@ -44,7 +44,7 @@ export default function Plans() {
       </header>
       <div className="grid grid-cols-3 col-start-2 col-end-10  ">
         {plans.map(({ name, price, info, meals, order, access, delivery }) => (
-          <div className=" border m-8 bg-white rounded-br-lg rounded-bl-lg overflow-hidden shadow-md">
+          <div className=" border m-8 bg-white rounded-br-lg rounded-bl-lg overflow-hidden shadow-md" key={name}>
             <div className="border-b border-yellow-600 p-4">
               <p className="uppercase text-xl font-thin">{name}</p>
               <p className="text-yellow-600 text-6xl font-thin">
@@ -52,21 +52,29 @@ export default function Plans() {
               </p>
               <i className="text-sm font-light">{info}</i>
             </div>
-            <div className="p-4 border-b border-yellow-600 font-thin text-xl">
+            <div className="p-4 border-b border-yellow-600 font-thin text-lg">
               <div className="flex ">
-                <div className="text-yellow-600 mr-3">[]</div>
+                <div className="text-yellow-600 mr-3">
+                  <Image src="/images/checkMark.svg" width="15" height="15" alt="checkmark" />
+                </div>
                 <p>{meals}</p>
               </div>
               <div className="flex">
-                <div className="text-yellow-600 mr-3">[]</div>
+                <div className="text-yellow-600 mr-3">
+                  <Image src="/images/checkMark.svg" width="15" height="15" alt="checkmark" />
+                </div>
                 <p>{order}</p>
               </div>
               <div className="flex">
-                <div className="text-yellow-600 mr-3">[]</div>
+                <div className="text-yellow-600 mr-3">
+                  <Image src="/images/checkMark.svg" width="15" height="15" alt="checkmark" />
+                </div>
                 <p>{access}</p>
               </div>
               <div className="flex">
-                <div className="text-yellow-600 mr-3">[]</div>
+                <div className="text-yellow-600 mr-3">
+                  <Image src="/images/checkMark.svg" width="15" height="15" alt="checkmark" />
+                </div>
                 <p>{delivery}</p>
               </div>
             </div>

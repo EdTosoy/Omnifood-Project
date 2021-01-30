@@ -27,8 +27,8 @@ export default function Testimonials() {
         className="bg-black py-20 bg-opacity-70 grid grid-cols-10 "
         id="cities"
       >
-        <header className="text-white col-span-full max-w-4xl mx-auto  mb-16">
-          <h1 className=" text-4xl font-thin text-center mb-5 uppercase">
+        <header className="text-white col-span-full font-extralight max-w-4xl mx-auto  mb-16">
+          <h1 className=" text-4xl font-300 text-center mb-5 uppercase">
             Our customers
             <span className="border-yellow-600 border-b-2 pb-2"> can't </span>
             live without u
@@ -36,7 +36,7 @@ export default function Testimonials() {
         </header>
         <div className="grid grid-cols-3 col-start-2 col-end-10 text-white ">
           {testimonials.map(({ img, name, text }) => (
-            <div className="px-5">
+            <div className="px-5" key={name}>
               <q className="text-xl font-thin font-300">{text}</q>
               <div className="flex items-center my-5">
                 <div className="rounded-full  relative overflow-hidden w-12 h-12 mr-5">

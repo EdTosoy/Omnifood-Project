@@ -45,22 +45,33 @@ export default function Locations() {
       </header>
       <div className="grid grid-cols-4 col-start-2 col-end-10">
         {cities.map(({ img, name, people, stars, twitter }) => (
-          <div className="w-96 h-9">
+          <div className="w-96 h-9" key={name}>
             <div className="">
               <Image src={img} width={250} height={180} />
             </div>
             <h1 className="text-2xl font-light mb-3">{name}</h1>
             <div className="">
               <div className="flex gap-3">
-                <span>[ ]</span>
+                <span>
+                  <Image src="/images/person.svg" width="25" height="25" alt="person" />
+                </span>
                 <p className="text-xl font-thin">{people}+ happy eaters</p>
               </div>
               <div className="flex gap-3">
-                <span>[ ]</span>
+                <span>
+                  <Image src="/images/star.svg" width="25" height="25" alt="stars" />
+                </span>
                 <p className="text-xl font-thin">{stars}+ top chefs</p>
               </div>
-              <div className="flex gap-3">
-                <span>[ ]</span>
+              <div className="flex gap-3 ">
+                <span>
+                  <Image
+                    src="/images/twitterOrange.svg"
+                    width="25"
+                    height="25"
+                    alt="twitter"
+                  />
+                </span>
                 <a
                   className="text-xl font-thin mb-20"
                   href={`http://twitter.com/@omnifood_${twitter}`}

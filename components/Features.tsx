@@ -33,10 +33,15 @@ interface features {
 
 export default function Features() {
   return (
-    <main className="max-h-screen grid grid-cols-10 my-20 text-gray-600" id="features">
+    <main
+      className="max-h-screen grid grid-cols-10 py-20 text-gray-600"
+      id="features"
+    >
       <header className="col-span-full max-w-2xl mx-auto  mb-24">
-        <h1 className="text-4xl font-thin text-center mb-5 uppercase">
-          Get food fas<span className="border-yellow-600 border-b-2 pb-2">t — n</span>ot fast food.
+        <h1 className="text-4xl font-extralight text-center mb-5 uppercase">
+          Get food fas
+          <span className="border-yellow-600 border-b-2 pb-2">t — n</span>ot
+          fast food.
         </h1>
         <p>
           Hello, we're Omnifood, your new premium food delivery service. We know
@@ -46,9 +51,9 @@ export default function Features() {
       </header>
       <div className="grid grid-cols-4 col-start-2 col-end-10">
         {features.map(({ icon, name, text }: features) => (
-          <div className=" px-6">
-            <Image src={icon} width="70px" height="70px" />
-            <h1 className="text-2xl uppercase font-thin mb-3">{name}</h1>
+          <div className=" px-6" key={name}>
+            <Image src={icon} width="70px" height="70px" alt={name} />
+            <h1 className="text-xl uppercase font-extralight mb-3">{name}</h1>
             <p>{text}</p>
           </div>
         ))}

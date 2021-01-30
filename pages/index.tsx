@@ -1,5 +1,6 @@
 import Contact from "components/Contacts";
 import Features from "components/Features";
+import Footer from "components/Footer";
 import HowItWorks from "components/HowItWorks";
 import Locations from "components/Locations";
 import Plans from "components/Plans";
@@ -13,9 +14,11 @@ export default function Home() {
     <div>
       <Head>
         <title>Omnifood</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Hello, we're Omnifood, your new premium food delivery service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at it, we promise! "
+        />
       </Head>
-
       <Header />
       <Features />
       <ShowCase />
@@ -24,6 +27,7 @@ export default function Home() {
       <Testimonials />
       <Plans />
       <Contact />
+      <Footer />
     </div>
   );
 }

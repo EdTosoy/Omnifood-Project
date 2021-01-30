@@ -1,6 +1,23 @@
 import Image from "next/image";
 
-const nav = ["FOOD DELIVERY", "HOW IT WORKS", "OUR LOCATIONS", "SIGN UP"];
+const nav = [
+  {
+    name: "FOOD DELIVERY",
+    id: "features",
+  },
+  {
+    name: "HOW IT WORKS",
+    id: "works",
+  },
+  {
+    name: "OUR LOCATIONS",
+    id: "cities",
+  },
+  {
+    name: "SIGN UP",
+    id: "plans",
+  },
+];
 
 export default function Header() {
   return (
@@ -12,16 +29,17 @@ export default function Header() {
               src={"/images/logo-white.png"}
               width="100px"
               height="100px"
+              alt="Logo"
             />
           </div>
           <ul className="flex justify-center gap-8 ">
-            {nav.map((navigationName) => (
-              <li className="text-white text-lg ">
+            {nav.map(({ name, id }) => (
+              <li className="text-white text-lg " key={id}>
                 <a
                   className="font-thin tracking-wide py-1  border-b-2 border-transparent  hover:border-yellow-600"
-                  href="#features"
+                  href={`#${id}`}
                 >
-                  {navigationName}
+                  {name}
                 </a>
               </li>
             ))}
